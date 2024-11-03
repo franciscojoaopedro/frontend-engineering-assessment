@@ -1,8 +1,4 @@
-import axios from "axios";
-
-const api = axios.create({
-  baseURL: "https://randomuser.me/api",
-});
+import { api } from "../services/api";
 
 export  function useApiCall() {
   async function getUsers() {
