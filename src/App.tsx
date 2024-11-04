@@ -1,20 +1,11 @@
-import { useEffect } from 'react'
-
-import { useApiCall } from './hooks/useApiCall'
+import Home from "./layout/pages/home";
 
 
 function App() {
 
-  const {getUsers}=useApiCall()
-  
-  useEffect(()=>{
-    getUsers()
-  },[])
   return (
     <>
-      <div>
-          <h1>Api</h1>
-      </div>
+      <Home/>
     </>
   )
 }

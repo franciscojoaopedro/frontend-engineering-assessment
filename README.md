@@ -22,4 +22,12 @@ Este projecto serve como teste de avaliacao para  o processo de seleção  para 
    ```bash
    git clone https://github.com/franciscojoaopedro/frontend-engineering-assessment
    cd frontend-engineering-assessment
+  
+   ```
 
+2.  **Instalar dependecias  e executar **:
+   ```bash
+    npm  install
+    npm run dev
+
+   ```
