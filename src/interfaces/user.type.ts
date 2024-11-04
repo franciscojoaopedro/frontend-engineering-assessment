@@ -1,6 +1,16 @@
 
+interface Info {
+  seed: string;
+  results: number;
+  page: number;
+  version: string;
+}
 
-export interface User {
+export interface IListUsers{
+  results:IUser[]
+  info:Info
+}
+export interface IUser {
     cell: string;
     dob: DateOfBirth;
     email: string;
