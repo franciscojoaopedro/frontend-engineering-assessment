@@ -10,6 +10,7 @@ Este projecto serve como teste de avaliacao para  o processo de seleção  para 
 - **Axios**: Cliente HTTP para fazer chamadas de API.
 - **Tailwind CSS**: Framework de CSS para estilização rápida e customizável.
 - **ShadCN**: Conjunto de componentes acessíveis e estilizados para React.
+- **TanStack Query**: Ela fornece ferramentas para: Buscar dados, Atualizar dados, Cacher dados, Sincronizar dados, Gerenciar mutações.
 
 ## Pré-requisitos
 

@@ -57,7 +57,7 @@ export default function Home() {
     setQuery(e.target.value);
   };
 
-  const indexOfLastUser = currentPage * 10;
+  const indexOfLastUser = currentPage * itemsPerPage;
   const indexOfFirstUser = indexOfLastUser - itemsPerPage;
   const currentUsers = filter.slice(indexOfFirstUser, indexOfLastUser);
 
@@ -108,14 +108,20 @@ export default function Home() {
               <Pagination>
                 <PaginationContent>
                   <PaginationItem>
-                    <PaginationPrevious href="#" onClick={handlePrevious} />
+                    <PaginationPrevious className="cursor-pointer"  onClick={(e)=>{
+                        e.preventDefault();
+                        handlePrevious();
+                    }} />
                   </PaginationItem>
                   {[...Array(totalPages)].map((_, index) => (
                     <PaginationItem key={index}>
                       <PaginationLink
-                        href="#"
                         isActive={currentPage === index + 1}
-                        onClick={() => setCurrentPage(index + 1)}
+                        onClick={(e) => 
+                           { e.preventDefault();
+                            setCurrentPage(index + 1)}}
+
+                        className="cursor-pointer"
                       >
                         {index + 1}
                       </PaginationLink>
@@ -123,7 +129,10 @@ export default function Home() {
                   ))}
                   {totalPages > 5 && <PaginationEllipsis />}
                   <PaginationItem>
-                    <PaginationNext href="#" onClick={handleNext} />
+                    <PaginationNext className="cursor-pointer"  onClick={(e)=>{
+                        e.preventDefault();
+                        handleNext();
+                    }} /> 
                   </PaginationItem>
                 </PaginationContent>
               </Pagination>

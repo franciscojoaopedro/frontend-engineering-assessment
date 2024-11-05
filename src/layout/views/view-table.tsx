@@ -32,7 +32,7 @@ export default function ListViewUsers({users}:IUsers) {
     
     const listSketon=[1,2,3,4,5,6]
   return (
-    <Table  className="w-[800px]  h-[700px]   shadow-md bg-white rounded-sm ">
+    <Table  className="relative w-[800px]  h-[500px]   shadow-md bg-white rounded-sm ">
       
       <TableHeader>
         <TableRow>
